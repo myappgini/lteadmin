@@ -14,7 +14,7 @@
                             <div class="inner">
                               <h3>
                                   <?php 
-                                      echo 'Card example';
+                                      echo '1.000';
                                   ?>
                               </h3>
 
