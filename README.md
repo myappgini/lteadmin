@@ -2,8 +2,9 @@
 # how to use
 
 Before pasting this codes files, rename the next files:
+
 | original name | renamed file |
-|---------------|--------------|
+|-|-|
 | index.php | index_old.php |
 | footer.php | footer_old.php |
 | header.php | header_old.php |
@@ -19,22 +20,25 @@ you can conmute to default appgini only changue true to false in config_lte.php 
 function getLteStatus($LTE_enable = true){
     if(!function_exists('getMemberInfo')){
         $LTE_enable = false;
-    } 
-    return $LTE_enable ;
+    }
+    return $LTE_enable;
 }
 ```
 
-### FIX:
+## FIX
+
 - redirection in forgotten password
 - redirection in new user registration
 
-### Changes:
-- config_lte.php 
-    - ```$LTE_globals``` basic configurations in global variable for the menu and the footer.
-    - ```$ico_menu``` definition of icons for lso groups in the side menu, is in json format.
+## Changes
+
+- config_lte.php
+  - ```$LTE_globals``` basic configurations in global variable for the menu and the footer.
+  - ```$ico_menu``` definition of icons for the groups in the side menu, is in json format.
 - myCustom.css
-    - modification of the background image
-        ```css
+  - modification of the background image and add exmples images
+
+    ```css
         .content-wrapper {
             min-height: 100%;
             background-color: #ecf0f5;
@@ -44,10 +48,9 @@ function getLteStatus($LTE_enable = true){
             background-size: cover;
             z-index: 800;
         }
-        ```
+    ```
 
     - hide fields directly id
-
 
         ```css
         label[for='id']{
@@ -59,7 +62,7 @@ function getLteStatus($LTE_enable = true){
         }
         ```
 
-# New Features!
+# New Features
 
 - hidden group
 
