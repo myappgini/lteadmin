@@ -38,7 +38,9 @@
                                             <small>Member since <?php echo $memberInfo['signupDate']; ?></small>
                                         </p>
                                     </li>
-                                    <?php if(!$_GET['signIn'] && !$_GET['loginFailed']){ ?>
+                                    <?php 
+                                    $call = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
+                                    if(!$_GET['signIn'] && !$_GET['loginFailed'] && $call != "membership_passwordReset.php" && $call != "membership_signup.php" ){ ?>
                                     <!-- Menu Body -->
                                     <li class="user-body">
                                       <div class="row">

@@ -83,8 +83,10 @@
                           
 						  <section class="content container-fluid">
 							  
-							  <?php if(isset($_GET['loginFailed']) || isset($_GET['signIn'])){return;} ?>
-							  
+						  <?php 
+							  $call = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
+							  if(isset($_GET['loginFailed']) || isset($_GET['signIn']) || $call == "membership_passwordReset.php" || $call == "membership_signup.php"){return;}
+							  ?>
 							  <!-- Left side column. contains the logo and sidebar -->
 							  <?php include ('header_lte_leftSideMenu.php') ?>
 								<!-- process notifications -->
