@@ -39,9 +39,10 @@
                                         "Altro":"fa fa-plus",
                                         "hiddens":"fa fa-eye-slash"
                                     }';
-                                    $json = json_decode($ico_menu,true);
+                                    if (isset($ico_menu)){
+                                        $json = json_decode($ico_menu,true);
+                                    }
                                     $ico = "fa fa-table"; //default ico
-                                    // $ico = $json['ico'] ? $json['ico'] : $ico ;
                                   foreach ($groups as $lte_group => $lte_tables) {
                                       if (($lte_group !== 'hiddens' || $memberInfo['admin']) ){ // new fucntionality if table group named hiddens dont show in other users
                                         if (count($lte_tables)){

@@ -14,10 +14,10 @@
         <footer class="main-footer">
             <!-- To the right -->
             <div class="pull-right hidden-xs">
-              Anything you want
+            <?php echo $LTE_globals =['footer-right-text']; ?>
             </div>
             <!-- Default to the left -->
-            <strong>ALE &copy; 2019 <a href="#">Alejandro Landini powered</a>.</strong> All rights reserved.
+            <?php echo $LTE_globals =['footer-left-text']; ?>
             <!-- Add footer template above here -->
             <div class="clearfix"></div>
             <?php if(!defined('APPGINI_SETUP') && is_file(dirname(__FILE__) . '/hooks/footer-extras.php')){ include(dirname(__FILE__).'/hooks/footer-extras.php'); } ?>
