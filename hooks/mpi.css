@@ -1,0 +1,21 @@
+/*
+*/
+/* 
+    Created on : 09-jun-2018, 17:55:23
+    Author     : Alejandro Landini
+*/
+
+.mpi-header-avatar{
+            width: 40px;
+            height: 40px;
+            -webkit-border-radius: 40px;
+            -webkit-background-clip: padding-box;
+            -moz-border-radius: 40px;
+            -moz-background-clip: padding;
+            border-radius: 40px;
+            background-clip: padding-box;
+            margin: 3px 0 0 3px;
+            float: left;
+            background-size: cover;
+            background-position: center center;
+        }

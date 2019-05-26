@@ -1,0 +1,39 @@
+                        <!-- mpi -->
+                        <form>
+                            <div class="panel panel-info">
+                                <div class="panel-heading">
+					<h3 class="panel-title">
+						<i class="glyphicon glyphicon-picture"></i>
+						Membership profile image
+					</h3>
+				</div>
+                                <div class="panel-body">
+                                    <div class="form-group row">
+                                        <div class="col-lg-9 col-lg-offset-2">
+                                                <div id="mpimage" class="pull-left"></div>
+                                                <div class="pull-right" style="overflow-x: hidden;">
+                                                    Upload new image  
+                                                    <input name="mpi" id="mpi" type="file">
+                                                    <br> 
+                                                </div>
+                                        </div>
+                                    </div>
+                                    <div class="row center-block">
+                                        <button type="submit" id="mpi-update" class="btn btn-default">Update</button>
+                                    </div>
+                                </div>
+                            </div>
+                        </form>
+                        <script>
+                            $j(document).ready(function() {
+                                getMpi({cmd:'u'},false);
+                            });
+                            $j(function() {
+                                $j("form").submit(function(e) {
+                                    e.preventDefault();    
+                                    var formData = new FormData(this);
+                                    getMpi(formData);
+                                });
+                            });
+
+                        </script>
