@@ -4,9 +4,9 @@
                       <!-- Logo -->
                       <a href="index.php" class="logo">
                         <!-- mini logo for sidebar mini 50x50 pixels -->
-                        <span class="logo-mini"><b><i class=<?php echo $LTE_globals =['logo-mini']; ?>"></i></b>&nbsp;<?php echo $LTE_globals =['logo-mini-text']; ?></span>
+                        <span class="logo-mini"><b><i class=<?php echo $LTE_globals['logo-mini']; ?>"></i></b>&nbsp;<?php echo $LTE_globals['logo-mini-text']; ?></span>
                         <!-- logo for regular state and mobile devices -->
-                        <span class="logo-lg"><b><i class="<?php echo $LTE_globals =['logo-mini']; ?>"></i>&nbsp;<?php echo $LTE_globals =['logo-mini-text']; ?></b></span>
+                        <span class="logo-lg"><b><i class="<?php echo $LTE_globals['logo-mini']; ?>"></i>&nbsp;<?php echo $LTE_globals['logo-mini-text']; ?></b></span>
                       </a>
 
                       <!-- Header Navbar -->
@@ -15,7 +15,7 @@
                         <a href="#" class="sidebar-toggle" data-toggle="push-menu" role="button">
                           <span class="sr-only">Toggle navigation</span>
                         </a>
-                        <p class="navbar-text hidden-xs" style="color: white;"><?php echo $LTE_globals =['navbar-text']; ?></p>
+                        <p class="navbar-text hidden-xs" style="color: white;"><?php echo $LTE_globals['navbar-text']; ?></p>
 
                         <!-- Navbar Right Menu -->
                         <div class="navbar-custom-menu">
