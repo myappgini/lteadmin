@@ -53,13 +53,13 @@ function getLteStatus($LTE_enable = true){
   - hide fields directly id
 
     ```css
-    label[for='id']{
-        display: none;
-    }
+        label[for='id']{
+            display: none;
+        }
 
-    label[for='id'] + div {
-        display: none;
-    }
+        label[for='id'] + div {
+            display: none;
+        }
     ```
 
 # New Features
