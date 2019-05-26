@@ -5,7 +5,7 @@ $LTE_globals =[
     "logo-mini" => "glyphicon glyphicon-home", //mini logo for sidebar mini 50x50 pixels
     "logo-mini-text" => "ALE", // text for side bar
     "navbar-text" => "Alejandro Landini template",
-    "footer-left-text" => "<strong>ALE © ". date("Y") ." <a href=\"#\">Piattaforma Digitale Management System</a>.</strong>",
+    "footer-left-text" => "<strong>ALE © ". date("Y") ." <a href=\"#\">Alejandro admin template from LTE Admin</a>.</strong>",
     "footer-right-text" => "Anything you want"
 ];
 
