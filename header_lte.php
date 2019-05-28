@@ -92,6 +92,7 @@
 									$j("body").removeClass();
 									$j("body").addClass("skin-blue fixed layout-top-nav");
 									$j(".sidebar-toggle").remove();
+									$j(".logo").remove();
 								</script>
 								<?php
 								
