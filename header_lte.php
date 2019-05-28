@@ -85,7 +85,17 @@
 							  
 						  <?php 
 							  $call = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
-							  if(isset($_GET['loginFailed']) || isset($_GET['signIn']) || $call == "membership_passwordReset.php" || $call == "membership_signup.php"){return;}
+							  if(isset($_GET['loginFailed']) || isset($_GET['signIn']) || $call == "membership_passwordReset.php" || $call == "membership_signup.php"){
+								
+								?>
+								<script>
+									$j("body").removeClass();
+									$j("body").addClass("skin-blue fixed layout-top-nav");
+									$j(".sidebar-toggle").remove();
+								</script>
+								<?php
+								
+								return;}
 							  ?>
 							  <!-- Left side column. contains the logo and sidebar -->
 							  <?php include ('header_lte_leftSideMenu.php') ?>
