@@ -27,6 +27,7 @@ function getLteStatus($LTE_enable = true){
 
 ## FIX
 
+- remove side bar in login
 - redirection in forgotten password
 - redirection in new user registration
 
@@ -70,3 +71,7 @@ function getLteStatus($LTE_enable = true){
 - mpi
 
     The mebership_profile_image is added by default, so the membership_profile.php file is also modified
+
+# Resources
+
+- <https://adminlte.io/themes/AdminLTE/documentation/index.html#introduction>
