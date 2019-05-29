@@ -33,9 +33,36 @@ function getLteStatus($LTE_enable = true){
 
 ## Changes
 
+- Update to adminLTE 2.4.10
+
 - config_lte.php
   - ```$LTE_globals``` basic configurations in global variable for the menu and the footer.
+
+    ```php
+    $LTE_globals =[
+    "app-title-prefix" => "Ale | ", //window bar prfix title or browser tab
+    "logo-mini" => "glyphicon glyphicon-home", //mini logo for sidebar mini 50x50 pixels
+    "logo-mini-text" => "ALE", // text for side bar
+    "navbar-text" => "Alejandro Landini template",
+    "footer-left-text" => "<strong>ALE © ". date("Y") ." <a href=\"#\">Alejandro Landini admin template from adminLTE</a>.</strong>",
+    "footer-right-text" => "Anything you want"
+    ];
+    ```
+
   - ```$ico_menu``` definition of icons for the groups in the side menu, is in json format.
+
+    ```php
+    //"GroupName":"ico"
+    $ico_menu = '{
+        "Orders":"fa fa-table",
+        "Gift":"fa fa-gift",
+        "Pencil":"fa fa-pencil-square-o",
+        "Cog":"fa fa-cog",
+        "Plus":"fa fa-plus",
+        "slash":"fa fa-eye-slash"
+    }';
+    ```
+
 - myCustom.css
   - modification of the background image and add exmples images
 
