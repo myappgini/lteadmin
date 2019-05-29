@@ -15,9 +15,9 @@
 		<link id="browser_favicon" rel="shortcut icon" href="<?php echo PREPEND_PATH; ?>images/favicon.ico">
 
 		<!-- LTE adding -->
-		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/dist/bootstrap/dist/css/bootstrap.css">
-		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/font-awesome/css/font-awesome.min.css">
-		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/Ionicons/css/ionicons.min.css">
+		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/bower_components/bootstrap/dist/css/bootstrap.css">
+		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/bower_components/font-awesome/css/font-awesome.min.css">
+		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/bower_components/Ionicons/css/ionicons.min.css">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/dist/css/AdminLTE.css">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/dist/css/skins/skin-blue.css">
 		<!-- /LTE adding -->
@@ -33,12 +33,12 @@
 		<![endif]-->
 		<script src="<?php echo PREPEND_PATH; ?>resources/jquery/js/jquery-1.12.4.min.js"></script>
 		<script>var $j = jQuery.noConflict();</script>
-                <script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/adminlte.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/adminlte.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/fastclick/lib/fastclick.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/moment/moment-with-locales.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/jquery/js/jquery.mark.min.js"></script>
-		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/jquery-slimscroll/jquery.slimscroll.js"></script>
-		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/fastclick/lib/fastclick.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/lightbox/js/prototype.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/lightbox/js/scriptaculous.js?load=effects"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/select2/select2.min.js"></script>
