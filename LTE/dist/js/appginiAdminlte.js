@@ -1,8 +1,6 @@
 /**
- * AdminLTE Demo Menu
+ * AdminLTE control Menu
  * ------------------
- * You should not use this file in production.
- * This file is for demo purposes only.
  */
 $j(function () {
     'use strict';
@@ -111,6 +109,7 @@ $j(function () {
                 $sidebar.removeClass('control-sidebar-dark');
                 $sidebar.addClass('control-sidebar-light');
                 tmp = 'control-sidebar-light';
+                $j('[data-sidebarskin="toggle"]').attr('checked', 'checked');
             } else {
                 $sidebar.removeClass('control-sidebar-light');
                 $sidebar.addClass('control-sidebar-dark');
@@ -146,23 +145,25 @@ $j(function () {
     
         tmp = get('controlSideSkin');
 
-        if (!$j('.control-sidebar').hasClass(tmp)){
+        if (tmp != "" && tmp != "null" && !$j('.control-sidebar').hasClass(tmp)){
             toggleControlSideSkin();
         }
         
         tmp = get('layout');
-        if (tmp == "control-sidebar-open"){
+        if (tmp != "" && tmp != "null" && tmp == "control-sidebar-open"){
+            var a = tmp;
             setTimeout(function(){
                 $j('[data-controlsidebar="control-sidebar-open"]').attr('checked', 'checked');
-                changeLayout(tmp);
+                changeLayout(a);
             },1000);
         }
 
         tmp = get('colapsedLeft');
-        if (tmp == "sidebar-collapse"){
+        if (tmp != "" && tmp != "null" && tmp == "sidebar-collapse"){
+            var b =tmp;
             setTimeout(function(){
-                $j('[data-controlsidebar="control-sidebar-open"]').attr('checked', 'checked');
-                changeLayout(tmp);
+                $j('[data-layout="sidebar-collapse"]').attr('checked', 'checked');
+                changeLayout(b);
             },1000);
         }
 
@@ -175,7 +176,7 @@ $j(function () {
             changeSkin($j(this).data('skin'));
         });
 
-        // Add the layout manager
+        // togle left side
         $j('[data-layout]').on('click', function () {
             var tmp = get('colapsedLeft');
             var cls = $j(this).data('layout');
@@ -238,7 +239,7 @@ $j(function () {
         // Sidebar Toggle +
         '<div class="form-group">' +
         '<label class="control-sidebar-subheading">' +
-        '<input type="checkbox"data-layout="sidebar-collapse"class="pull-right"/> ' +
+        '<input type="checkbox" data-layout="sidebar-collapse" class="pull-right"/> ' +
         'Toggle Sidebar' +
         '</label>' +
         '<p>Toggle the left sidebar\'s state (open or collapse)</p>' +
