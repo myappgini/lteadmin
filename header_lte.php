@@ -98,6 +98,7 @@
 									$j("body").addClass("skin-blue fixed layout-top-nav");
 									$j(".sidebar-toggle").remove();
 									$j(".logo").remove();
+									$j(".navbar-custom-menu ul").prepend('<li><a href="index.php?signIn=1"><i class="fa fa-fw fa-caret-left"></i> Back to login</a></li>');
 								</script>
 								<?php
 								
