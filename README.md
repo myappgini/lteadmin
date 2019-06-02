@@ -34,6 +34,8 @@ function getLteStatus($LTE_enable = true){
 
 ## Changes
 
+- Add back to login button in upper menu in reset password page and new user page.
+
 - Add a right side control bar, ther you can changue the layout color and other things. You can customize this item.
 
 - Update to adminLTE 2.4.10
