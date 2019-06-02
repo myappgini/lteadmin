@@ -1,5 +1,8 @@
+# adminLTE for AppGini
 
-# how to use
+![Login Page](https://trello-attachments.s3.amazonaws.com/5cf458a4c077516299941bbf/600x295/4543ab3b3cfe3a5e98ce23f3f76f0ff2/imagen.png)
+
+## how to use
 
 Before pasting this codes files, rename the next files:
 
@@ -95,7 +98,7 @@ function getLteStatus($LTE_enable = true){
         }
     ```
 
-# New Features
+## New Features
 
 - hidden group
 
@@ -104,6 +107,6 @@ function getLteStatus($LTE_enable = true){
 
     The mebership_profile_image is added by default, so the membership_profile.php file is also modified
 
-# Resources
+## Resources
 
 - <https://adminlte.io/themes/AdminLTE/documentation/index.html#introduction>
