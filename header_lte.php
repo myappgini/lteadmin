@@ -26,6 +26,7 @@
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/timepicker/bootstrap-timepicker.min.css" media="screen">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/datepicker/css/datepicker.css" media="screen">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/bootstrap-datetimepicker/bootstrap-datetimepicker.css" media="screen">
+		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>hooks/mpi.css">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>dynamic.css.php">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>myCustom.css" mediad="screen">
 		<!--[if lt IE 9]>
@@ -50,8 +51,9 @@
 		<script src="<?php echo PREPEND_PATH; ?>resources/jscookie/js.cookie.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/datepicker/js/datepicker.packed.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>hooks/mpi.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>common.js.php"></script>
-                
+		<script>getMpi({cmd:'u'},true,false);</script>      
 
 		<?php if(isset($x->TableName) && is_file(dirname(__FILE__) . "/hooks/{$x->TableName}-tv.js")){ ?>
 			<script src="<?php echo PREPEND_PATH; ?>hooks/<?php echo $x->TableName; ?>-tv.js"></script>
