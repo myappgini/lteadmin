@@ -27,11 +27,14 @@ function getLteStatus($LTE_enable = true){
 
 ## FIX
 
+- fix mpi control
 - remove side bar in login
 - redirection in forgotten password
 - redirection in new user registration
 
 ## Changes
+
+- Add a right side control bar, ther you can changue the layout color and other things. You can customize this item.
 
 - Update to adminLTE 2.4.10
 
