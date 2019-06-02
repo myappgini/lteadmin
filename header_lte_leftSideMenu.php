@@ -30,15 +30,6 @@
                                   }
 
                                   $i = 0; 
-                                    //changue this for tablename icon
-                                    $ico_menu = '{
-                                        "Documenti":"fa fa-table",
-                                        "Catalogo":"fa fa-gift",
-                                        "Prima Nota":"fa fa-pencil-square-o",
-                                        "Anagrafiche":"fa fa-cog",
-                                        "Altro":"fa fa-plus",
-                                        "hiddens":"fa fa-eye-slash"
-                                    }';
                                     if (isset($ico_menu)){
                                         $json = json_decode($ico_menu,true);
                                     }
