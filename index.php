@@ -1,5 +1,6 @@
 <?php
 	$currDir = dirname(__FILE__);
+	define('HOMEPAGE', true);
 	include("{$currDir}/defaultLang.php");
 	include("{$currDir}/language.php");
 	include("{$currDir}/lib.php");
