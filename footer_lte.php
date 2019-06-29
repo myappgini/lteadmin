@@ -1,6 +1,5 @@
 
-            </section>
-                <!-- /.content HEADER -->
+            
         </section>
             <!-- /.content FLUID-->
 

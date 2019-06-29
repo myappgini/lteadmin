@@ -85,7 +85,9 @@
 				<div class="content-wrapper">
 					<!-- Content Header (Page header) -->
                       <section class="content-header">
-                          
+						  
+					  </section>
+                	  <!-- /.content HEADER -->
 						  <section class="content container-fluid">
 							  
 						  <?php 
