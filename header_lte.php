@@ -67,7 +67,6 @@
                         <?php
                         $memberInfo = getMemberInfo();
                         ?>
-
 			
 			<?php if(!defined('APPGINI_SETUP') && is_file(dirname(__FILE__) . '/hooks/header-extras.php')){ include(dirname(__FILE__).'/hooks/header-extras.php'); } ?>
 			<?php if(class_exists('Notification')) echo Notification::placeholder(); ?>
@@ -82,32 +81,32 @@
 				
 				<?php include('header_lte_main.php'); ?>
 				<!-- Content Wrapper. Contains page content -->
+				<!-- aside here -->
+				<?php 
+				$call = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
+				if(isset($_GET['loginFailed']) || isset($_GET['signIn']) || $call == "membership_passwordReset.php" || $call == "membership_signup.php"){
+					?>
+					<script>
+						$j("body").removeClass();
+						$j("body").addClass("skin-blue fixed layout-top-nav");
+						$j(".sidebar-toggle").remove();
+						$j(".logo").remove();
+					</script>
+					<?php
+					// return;
+				}else{
+					?>
+						<!-- Left side column. contains the logo and sidebar -->
+						<?php include ('header_lte_leftSideMenu.php') ?>
+					<?php
+				}
+					?>
 				<div class="content-wrapper">
 					<!-- Content Header (Page header) -->
                       <section class="content-header">
-						  
-					  </section>
-                	  <!-- /.content HEADER -->
+                          
 						  <section class="content container-fluid">
-							  
-						  <?php 
-							  $call = basename($_SERVER['REQUEST_URI'], '?' . $_SERVER['QUERY_STRING']);
-							  if(isset($_GET['loginFailed']) || isset($_GET['signIn']) || $call == "membership_passwordReset.php" || $call == "membership_signup.php"){
-								
-								?>
-								<script>
-									$j("body").removeClass();
-									$j("body").addClass("skin-blue fixed layout-top-nav");
-									$j(".sidebar-toggle").remove();
-									$j(".logo").remove();
-									$j(".navbar-custom-menu ul").prepend('<li><a href="index.php?signIn=1"><i class="fa fa-fw fa-caret-left"></i> Back to login</a></li>');
-								</script>
-								<?php
-								
-								return;}
-							  ?>
-							  <!-- Left side column. contains the logo and sidebar -->
-							  <?php include ('header_lte_leftSideMenu.php') ?>
+
 								<!-- process notifications -->
 								<div style="height: 65px; margin: -25px 0 -25px;">
 									<?php if(function_exists('showNotifications')) echo showNotifications(); ?>
