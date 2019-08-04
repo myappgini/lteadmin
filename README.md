@@ -30,10 +30,16 @@ function getLteStatus($LTE_enable = true){
 
 ## FIX
 
+04/08/2019
+
+- fix double wide left side menu in small devices
+
 29/06/2019
+
 - fix print problem
 
 older
+
 - fix mpi control
 - remove side bar in login
 - redirection in forgotten password
