@@ -30,6 +30,10 @@ function getLteStatus($LTE_enable = true){
 
 ## FIX
 
+01/10/2019
+
+- fix PREPEND_PATH in files sources
+
 04/08/2019
 
 - fix double wide left side menu in small devices
