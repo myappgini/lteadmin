@@ -34,10 +34,9 @@
 		<![endif]-->
 
 		<!-- jQuery 3 -->
-		<script src="LTE/bower_components/jquery/dist/jquery.min.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/fastclick/lib/fastclick.js"></script>
-		<!-- <script src="<?php //echo PREPEND_PATH; ?>resources/jquery/js/jquery-1.12.4.min.js"></script> -->
 		<script>var $j = jQuery.noConflict();</script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/adminlte.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/appginiAdminlte.js"></script>

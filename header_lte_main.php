@@ -2,7 +2,7 @@
                     <header class="main-header">
 
                       <!-- Logo -->
-                      <a href="index.php" class="logo">
+                      <a href="<?php echo PREPEND_PATH; ?>index.php" class="logo">
                         <!-- mini logo for sidebar mini 50x50 pixels -->
                         <span class="logo-mini"><b><i class=<?php echo $LTE_globals['logo-mini']; ?>"></i></b>&nbsp;<?php echo $LTE_globals['logo-mini-text']; ?></span>
                         <!-- logo for regular state and mobile devices -->
@@ -20,19 +20,27 @@
                         <!-- Navbar Right Menu -->
                         <div class="navbar-custom-menu">
                             <ul class="nav navbar-nav">
+                              <!-- language menu -->
+                              <?php
+                                if (file_exists("language/lang_menu.php")){
+                                  include "language/lang_menu.php";
+
+                                }
+                              ?>
+                              <!-- language menu -->
                              <!-- User Account Menu -->
                                 <li class="dropdown user user-menu">
                                   <!-- Menu Toggle Button -->
                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <!-- The user image in the navbar-->
-                                    <img src="images/no_image.png" class="user-image mpi-header-avatar" alt="User Image">
+                                    <img src="<?php echo PREPEND_PATH; ?>images/no_image.png" class="user-image mpi-header-avatar" alt="User Image">
                                     <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                     <span class="hidden-xs"><?php echo getLoggedMemberID(); ?></span>
                                   </a>
                                   <ul class="dropdown-menu">
                                     <!-- The user image in the menu -->
                                     <li class="user-header">
-                                        <img src="images/no_image.png" class="img-circle user-image mpi-header-avatar" alt="User Image">
+                                        <img src="<?php echo PREPEND_PATH; ?>images/no_image.png" class="img-circle user-image mpi-header-avatar" alt="User Image">
                                         <p>
                                             <?php echo getLoggedMemberID(); ?> - <?php echo $memberInfo['group']; ?>
                                             <small>Member since <?php echo $memberInfo['signupDate']; ?></small>
@@ -58,7 +66,7 @@
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
                                       <div class="col-xs-6 text-center">
-                                        <a href="membership_profile.php" class="btn btn-app"><i class="fa fa-user"></i>&nbsp;Profile</a>
+                                        <a href="<?php echo PREPEND_PATH; ?>membership_profile.php" class="btn btn-app"><i class="fa fa-user"></i>&nbsp;Profile</a>
                                       </div>
                                       <div class="col-xs-6 text-center">
                                         <!--<a href="#" class="btn btn-app">Sign out</a>-->

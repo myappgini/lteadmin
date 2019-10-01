@@ -61,8 +61,9 @@
                                                                         $tChkHL = array_search($lte_table, array('ordersDetails','creditDocument','_resumeOrders', 'electronicInvoice','modalitaPagamento','codiceDestinatario','regimeFiscale','tipoCassa'));
                                                                         if($tChkHL === false || $tChkHL === null){ /* if table is not set as hidden in homepage */ ?>
                                                                             <li class ="<?php echo ($lte_table === $x->TableName ? 'active' : ''); ?>">
-                                                                                <a href="<?php echo $lte_table; ?>_view.php">
-                                                                                    <?php echo ($tc['tableIcon'] ? '<img src="' . $tc['tableIcon'] . '">' : '');?>
+                                                                                <a href="<?php echo PREPEND_PATH.$lte_table; ?>_view.php">
+                                                                                <!-- TODO -->
+                                                                                    <?php echo ($tc['tableIcon'] ? '<img src="' . PREPEND_PATH . $tc['tableIcon'] . '">' : '');?>
                                                                                     <strong class="table-caption">
                                                                                         <?php 
                                                                                             $dot = (strlen($tc['Caption']) > $len) ? "..." : "";
@@ -83,8 +84,8 @@
                                                                         $dot = (strlen($title) > $len+3) ? "..." : "";
                                                                             ?>
                                                                             <li>
-                                                                                <a href="<?php echo $link['url']; ?>" title="<?php echo $title; ?>">
-                                                                                    <?php echo ($link['icon'] ? '<img src="' . $link['icon'] . '">' : ''); ?>
+                                                                                <a href="<?php echo PREPEND_PATH.$link['url']; ?>" title="<?php echo $title; ?>">
+                                                                                    <?php echo ($link['icon'] ? '<img src="' . PREPEND_PATH.$link['icon'] . '">' : ''); ?>
                                                                                     <?php echo substr($title,0,$len + 3).$dot; ?>
                                                                                 </a>
                                                                             </li>
@@ -113,8 +114,8 @@
                                       if($memberInfo['admin'] || @in_array($memberInfo['group'], $link['groups']) || @in_array('*', $link['groups'])){
                                           ?>
                                           <li>
-                                              <a href="<?php echo $link['url']; ?>">
-                                                  <?php echo ($link['icon'] ? '<img src="' . $link['icon'] . '">' : ''); ?>
+                                              <a href="<?php echo PREPEND_PATH.$link['url']; ?>">
+                                                  <?php echo ($link['icon'] ? '<img src="' .PREPEND_PATH.$link['icon'] . '">' : ''); ?>
                                                   <?php echo $link['subGroup'] ? $link['subGroup']." - ".$link['title'] : $link['title']; ?>
                                               </a>
                                           </li>
