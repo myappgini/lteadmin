@@ -8,6 +8,11 @@
     z-index: 800;
   }
   
+  .content .row{
+    background-color: white;
+    border-radius: 10px;
+  }
+  
 label[for='id']{
     display: none;
 }

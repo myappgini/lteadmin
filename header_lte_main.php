@@ -20,14 +20,24 @@
                         <!-- Navbar Right Menu -->
                         <div class="navbar-custom-menu">
                             <ul class="nav navbar-nav">
-                              <!-- language menu -->
+                              <!-- TODO: language menu -->
                               <?php
-                                if (file_exists("language/lang_menu.php")){
-                                  include "language/lang_menu.php";
+                                if (file_exists(PREPEND_PATH."language/lang_menu.php")){
+                                  include PREPEND_PATH."language/lang_menu.php";
 
                                 }
                               ?>
-                              <!-- language menu -->
+                              <!-- /language menu -->
+
+                              <!-- TODO: notification area -->
+                              <?php
+                                if (file_exists(PREPEND_PATH."header_lte_notifications.php")){
+                                  include PREPEND_PATH."header_lte_notifications.php";
+
+                                }
+                              ?>
+                              <!-- /notification area -->
+
                              <!-- User Account Menu -->
                                 <li class="dropdown user user-menu">
                                   <!-- Menu Toggle Button -->
@@ -42,7 +52,10 @@
                                     <li class="user-header">
                                         <img src="<?php echo PREPEND_PATH; ?>images/no_image.png" class="img-circle user-image mpi-header-avatar" alt="User Image">
                                         <p>
-                                            <?php echo getLoggedMemberID(); ?> - <?php echo $memberInfo['group']; ?>
+                                            <?php echo "user: ". getLoggedMemberID(); ?> 
+                                            <br> 
+                                            <?php echo "Group: ". $memberInfo['group']; ?>
+                                            
                                             <small>Member since <?php echo $memberInfo['signupDate']; ?></small>
                                         </p>
                                     </li>

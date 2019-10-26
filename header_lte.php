@@ -26,9 +26,9 @@
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/timepicker/bootstrap-timepicker.min.css" media="screen">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/datepicker/css/datepicker.css" media="screen">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/bootstrap-datetimepicker/bootstrap-datetimepicker.css" media="screen">
-		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>hooks/mpi.css">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>dynamic.css.php">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>myCustom.css" mediad="screen">
+		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>hooks/mpi.css">
 		<!--[if lt IE 9]>
 			<script src="<?php echo PREPEND_PATH; ?>resources/initializr/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		<![endif]-->
@@ -36,11 +36,11 @@
 		<!-- jQuery 3 -->
 		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
-		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/fastclick/lib/fastclick.js"></script>
-		<script>var $j = jQuery.noConflict();</script>
-		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/adminlte.js"></script>
-		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/appginiAdminlte.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/fastclick/lib/fastclick.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/adminlte.js"></script>
+		<script>var $j = jQuery.noConflict();</script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/appginiAdminlte.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/moment/moment-with-locales.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/jquery/js/jquery.mark.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/lightbox/js/prototype.js"></script>
