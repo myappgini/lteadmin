@@ -30,6 +30,11 @@ function getLteStatus($LTE_enable = true){
 
 ## FIX
 
+26/10/2019
+
+- update Admin LTE package.
+- fix bugs
+
 01/10/2019
 
 - fix PREPEND_PATH in files sources
