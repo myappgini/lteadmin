@@ -34,6 +34,10 @@ function getLteStatus($LTE_enable = true){
 
 ## FIX
 
+--/--/2019
+
+- fix RTL LTR text
+
 26/10/2019
 
 - update Admin LTE package.
