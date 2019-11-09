@@ -1,6 +1,7 @@
 <?php
 $globals = '{
     "app-title-prefix"  :"Ale | ", 
+    "app-dir-RTL-enable" : false ,
     "logo-mini"         :"glyphicon glyphicon-tags", 
     "logo-mini-text"    :"LTE", 
     "navbar-text"       :"Alejandro Landini template AdminLTE",

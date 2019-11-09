@@ -26,6 +26,10 @@
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/timepicker/bootstrap-timepicker.min.css" media="screen">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/datepicker/css/datepicker.css" media="screen">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/bootstrap-datetimepicker/bootstrap-datetimepicker.css" media="screen">
+		<!-- add rtl css if configured-->
+		<?php if ($LTE_globals['app-dir-RTL-enable']){?>
+			<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/initializr/css/rtl.css">
+		<?php } ?>
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>dynamic.css.php">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>myCustom.css" mediad="screen">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>hooks/mpi.css">

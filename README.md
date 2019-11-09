@@ -32,9 +32,9 @@ function getLteStatus($LTE_enable = true){
 }
 ```
 
-## FIX
+## Changues/FIX LOG
 
---/--/2019
+09/11/2019
 
 - fix RTL LTR text
 
@@ -47,22 +47,20 @@ function getLteStatus($LTE_enable = true){
 
 - fix PREPEND_PATH in files sources
 
-04/08/2019
-
-- fix double wide left side menu in small devices
-
-29/06/2019
-
-- fix print problem
-
 older
 
+- 04/08/19 fix double wide left side menu in small devices
+- 29/06/19 fix print problem
 - fix mpi control
 - remove side bar in login
 - redirection in forgotten password
 - redirection in new user registration
 
 ## Changes
+
+- Update to adminLTE 2.4.18
+
+- A new variable is added to enable text direction
 
 - Add back to login button in upper menu in reset password page and new user page.
 
@@ -76,6 +74,7 @@ older
     ```php
     $LTE_globals =[
     "app-title-prefix" => "Ale | ", //window bar prfix title or browser tab
+    "app-dir-RTL-enable" : false , // add for RTL LTR dir languaje
     "logo-mini" => "glyphicon glyphicon-home", //mini logo for sidebar mini 50x50 pixels
     "logo-mini-text" => "ALE", // text for side bar
     "navbar-text" => "Alejandro Landini template",
