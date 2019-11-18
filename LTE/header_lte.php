@@ -12,13 +12,14 @@
 		<meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 		<title><?php echo $LTE_globals['app-title-prefix']; ?><?php echo (isset($x->TableTitle) ? $x->TableTitle : ''); ?></title>
-		<link id="browser_favicon" rel="shortcut icon" href="<?php echo PREPEND_PATH; ?>images/favicon.ico">
+		<link id="browser_favicon" rel="shortcut icon" href="<?php echo PREPEND_PATH; ?>LTE/logo/favicon.ico">
 
 		<!-- LTE adding -->
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/bower_components/bootstrap/dist/css/bootstrap.min.css">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/bower_components/font-awesome/css/font-awesome.min.css">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/bower_components/Ionicons/css/ionicons.min.css">
-		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/dist/css/AdminLTE.css">
+		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/jsonedit/jsonedit.css">
+		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/dist/css/AdminLTE.min.css">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>LTE/dist/css/skins/_all-skins.css">
 		<!-- /LTE adding -->
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>resources/lightbox/css/lightbox.css" media="screen">
@@ -32,46 +33,49 @@
 		<?php } ?>
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>dynamic.css.php">
 		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>myCustom.css" mediad="screen">
-		<link rel="stylesheet" href="<?php echo PREPEND_PATH; ?>hooks/mpi.css">
+
 		<!--[if lt IE 9]>
 			<script src="<?php echo PREPEND_PATH; ?>resources/initializr/js/vendor/modernizr-2.6.2-respond-1.1.0.min.js"></script>
 		<![endif]-->
 
-		<!-- jQuery 3 -->
 		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/jquery/dist/jquery.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/bootstrap/dist/js/bootstrap.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/jquery-slimscroll/jquery.slimscroll.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/bower_components/fastclick/lib/fastclick.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/adminlte.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/jsonedit/jeditable.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/jsonedit/jquery.contextMenu.js"></script> 
+		<script src="<?php echo PREPEND_PATH; ?>LTE/jsonedit/jsonedit.js"></script> 
 		<script>var $j = jQuery.noConflict();</script>
-		<script src="<?php echo PREPEND_PATH; ?>LTE/dist/js/appginiAdminlte.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/moment/moment-with-locales.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/jquery/js/jquery.mark.min.js"></script>
-		<script src="<?php echo PREPEND_PATH; ?>resources/lightbox/js/prototype.js"></script>
-		<script src="<?php echo PREPEND_PATH; ?>resources/lightbox/js/scriptaculous.js?load=effects"></script>
+		<!-- conflict con admin lte -->
+		<!-- <script src="<?php //echo PREPEND_PATH; ?>resources/lightbox/js/prototype.js"></script> -->
+		<!-- <script src="<?php //echo PREPEND_PATH; ?>resources/lightbox/js/scriptaculous.js?load=effects"></script> -->
 		<script src="<?php echo PREPEND_PATH; ?>resources/select2/select2.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/timepicker/bootstrap-timepicker.min.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/jscookie/js.cookie.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/datepicker/js/datepicker.packed.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>resources/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+		<script src="<?php echo PREPEND_PATH; ?>LTE/appginiAdminlte.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>hooks/mpi.js"></script>
 		<script src="<?php echo PREPEND_PATH; ?>common.js.php"></script>
-		<script>getMpi({cmd:'u'},true,false);</script>      
-
+		
 		<?php if(isset($x->TableName) && is_file(dirname(__FILE__) . "/hooks/{$x->TableName}-tv.js")){ ?>
 			<script src="<?php echo PREPEND_PATH; ?>hooks/<?php echo $x->TableName; ?>-tv.js"></script>
-		<?php } ?>
-
-	</head>
-	<body class="hold-transition skin-black-light fixed sidebar-mini">
-		<div  class="wrapper">
-			<?php if(function_exists('handle_maintenance')) echo handle_maintenance(true); ?>
-
-                        <?php
+			<?php } ?>
+			
+		</head>
+		<body class="hold-transition skin-black-light fixed sidebar-mini">
+			<div  class="wrapper">
+				<?php if(function_exists('handle_maintenance')) echo handle_maintenance(true); ?>
+				
+				<?php
                         $memberInfo = getMemberInfo();
                         ?>
 			
-			<?php if(!defined('APPGINI_SETUP') && is_file(dirname(__FILE__) . '/hooks/header-extras.php')){ include(dirname(__FILE__).'/hooks/header-extras.php'); } ?>
+			<?php if(!defined('APPGINI_SETUP') && is_file(dirname(__FILE__) . '/../hooks/header-extras.php')){ include(dirname(__FILE__).'/../hooks/header-extras.php'); } ?>
+			<script>//getMpi({cmd:'u'},true,false);</script>      
 			<?php if(class_exists('Notification')) echo Notification::placeholder(); ?>
 
 			<?php if($_REQUEST['Embedded']){ ?>

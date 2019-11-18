@@ -30,10 +30,7 @@
                                   }
 
                                 $i = 0; 
-                                if (isset($ico_menu)){
-                                    $json = json_decode($ico_menu,true);
-                                }
-                                $ico = "fa fa-table"; //default ico
+                                
                                 $len = 17;
                                   foreach ($groups as $lte_group => $lte_tables) {
                                       if (($lte_group !== 'hiddens' || $memberInfo['admin']) ){ // new fucntionality if table group named hiddens dont show in other users
@@ -41,7 +38,7 @@
                                             if (($lte_group !== 'None') ){
                                                 ?>
                                                     <li class="treeview <?php echo ($lte_group === $current_group ? 'active' : '');?>">
-                                                        <a href="#"><i class="<?php echo $json[$lte_group] ? $json[$lte_group] : $ico; ?>"></i> <span><?php echo $lte_group; ?></span>
+                                                        <a href="#"><i class="<?php echo $LTE_group_ico[$lte_group] ? $LTE_group_ico[$lte_group] : $ico; ?>"></i> <span><?php echo $lte_group; ?></span>
                                                             <span class="pull-right-container">
                                                             <i class="fa fa-angle-left pull-right"></i>
                                                             </span>

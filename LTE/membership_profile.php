@@ -1,5 +1,6 @@
 <?php
-	$currDir=dirname(__FILE__);
+	define("PREPEND_PATH", "../");
+	$currDir=dirname(__FILE__)."/..";
 	include("$currDir/defaultLang.php");
 	include("$currDir/language.php");
 	include("$currDir/lib.php");
@@ -165,15 +166,15 @@
 				<div class="panel-body">
 					<p><strong><?php echo $Translation['Legend']; ?></strong></p>
 					<div class="row">
-						<div class="col-xs-2 col-md-1 text-right"><img src="admin/images/stop_icon.gif"></div>
+						<div class="col-xs-2 col-md-1 text-right"><img src="<?php echo PREPEND_PATH; ?>admin/images/stop_icon.gif"></div>
 						<div class="col-xs-10 col-md-5"><?php echo $Translation['Not allowed']; ?></div>
-						<div class="col-xs-2 col-md-1 text-right"><img src="admin/images/member_icon.gif"></div>
+						<div class="col-xs-2 col-md-1 text-right"><img src="<?php echo PREPEND_PATH; ?>admin/images/member_icon.gif"></div>
 						<div class="col-xs-10 col-md-5"><?php echo $Translation['Only your own records']; ?></div>
 					</div>
 					<div class="row">
-						<div class="col-xs-2 col-md-1 text-right"><img src="admin/images/members_icon.gif"></div>
+						<div class="col-xs-2 col-md-1 text-right"><img src="<?php echo PREPEND_PATH; ?>admin/images/members_icon.gif"></div>
 						<div class="col-xs-10 col-md-5"><?php echo $Translation['All records owned by your group']; ?></div>
-						<div class="col-xs-2 col-md-1 text-right"><img src="admin/images/approve_icon.gif"></div>
+						<div class="col-xs-2 col-md-1 text-right"><img src="<?php echo PREPEND_PATH; ?>admin/images/approve_icon.gif"></div>
 						<div class="col-xs-10 col-md-5"><?php echo $Translation['All records']; ?></div>
 					</div>
 
@@ -193,11 +194,11 @@
 							<tbody>
 								<?php foreach($permissions as $tn => $perm){ ?>
 									<tr>
-										<td><img src="<?php echo $userTables[$tn][2]; ?>"> <a href="<?php echo $tn; ?>_view.php"><?php echo $userTables[$tn][0]; ?></a></td>
-										<td class="text-center"><img src="admin/images/<?php echo permIcon($perm[2]); ?>" /></td>
-										<td class="text-center"><img src="admin/images/<?php echo ($perm[1] ? 'approve' : 'stop'); ?>_icon.gif" /></td>
-										<td class="text-center"><img src="admin/images/<?php echo permIcon($perm[3]); ?>" /></td>
-										<td class="text-center"><img src="admin/images/<?php echo permIcon($perm[4]); ?>" /></td>
+										<td><img src="<?php echo PREPEND_PATH; ?><?php echo $userTables[$tn][2]; ?>"> <a href="<?php echo $tn; ?>_view.php"><?php echo $userTables[$tn][0]; ?></a></td>
+										<td class="text-center"><img src="<?php echo PREPEND_PATH; ?>admin/images/<?php echo permIcon($perm[2]); ?>" /></td>
+										<td class="text-center"><img src="<?php echo PREPEND_PATH; ?>admin/images/<?php echo ($perm[1] ? 'approve' : 'stop'); ?>_icon.gif" /></td>
+										<td class="text-center"><img src="<?php echo PREPEND_PATH; ?>admin/images/<?php echo permIcon($perm[3]); ?>" /></td>
+										<td class="text-center"><img src="<?php echo PREPEND_PATH; ?>admin/images/<?php echo permIcon($perm[4]); ?>" /></td>
 									</tr>
 								<?php } ?>
 							</tbody>
@@ -211,7 +212,7 @@
 		<div class="col-md-6">
 
 		<?php /* Inserted by Membership Profile Image */ ?>
-		<?php echo file_get_contents('hooks/mpi_template.html');?>
+		<?php echo file_get_contents(PREPEND_PATH.'hooks/mpi_template.html');?>
 		<?php /* End of Membership Profile Image code */ ?>
 					
 			<!-- group and IP address -->
@@ -333,9 +334,9 @@
 				/* inline feedback of confirm password */
 				$j('#confirm-password').on('keyup', function(){
 					if($j('#confirm-password').val() != $j('#new-password').val() || !$j('#confirm-password').val().length){
-						$j('#confirm-status').html('<img align="top" src="Exit.gif"/>');
+						$j('#confirm-status').html('<img align="top" src="<?php echo PREPEND_PATH; ?>Exit.gif"/>');
 					}else{
-						$j('#confirm-status').html('<img align="top" src="update.gif"/>');
+						$j('#confirm-status').html('<img align="top" src="<?php echo PREPEND_PATH; ?>update.gif"/>');
 					}
 				});
 			<?php } ?>

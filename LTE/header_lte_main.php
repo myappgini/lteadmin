@@ -1,4 +1,10 @@
-                    <!-- Main Header -->
+<?php
+$hooks_dir = dirname(__FILE__)."/../hooks";
+include_once ("{$hooks_dir}/mpi.php");
+$mpiFolder = dirname(__FILE__)."/../images/";
+?>
+
+<!-- Main Header -->
                     <header class="main-header">
 
                       <!-- Logo -->
@@ -23,7 +29,7 @@
                               <!-- TODO: language menu -->
                               <?php
                                 if (file_exists(PREPEND_PATH."language/lang_menu.php")){
-                                  include PREPEND_PATH."language/lang_menu.php";
+                                  //include PREPEND_PATH."language/lang_menu.php";
 
                                 }
                               ?>
@@ -32,7 +38,7 @@
                               <!-- TODO: notification area -->
                               <?php
                                 if (file_exists(PREPEND_PATH."header_lte_notifications.php")){
-                                  include PREPEND_PATH."header_lte_notifications.php";
+                                  //include PREPEND_PATH."header_lte_notifications.php";
 
                                 }
                               ?>
@@ -41,16 +47,20 @@
                              <!-- User Account Menu -->
                                 <li class="dropdown user user-menu">
                                   <!-- Menu Toggle Button -->
+                                  <?php
+                                  $mpi = new Mpi($memberInfo['username'],$mpiFolder);
+                                  //echo '{"image":"'.$mpi->image. '", "thumb":"'.$mpi->thumb.'"}';
+                                  ?>
                                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">
                                     <!-- The user image in the navbar-->
-                                    <img src="<?php echo PREPEND_PATH; ?>images/no_image.png" class="user-image mpi-header-avatar" alt="User Image">
+                                    <img src="<?php echo PREPEND_PATH; ?>images/<?php echo $mpi->thumb; ?>" class="user-image" alt="User Image">
                                     <!-- hidden-xs hides the username on small devices so only the image appears. -->
                                     <span class="hidden-xs"><?php echo getLoggedMemberID(); ?></span>
                                   </a>
                                   <ul class="dropdown-menu">
                                     <!-- The user image in the menu -->
                                     <li class="user-header">
-                                        <img src="<?php echo PREPEND_PATH; ?>images/no_image.png" class="img-circle user-image mpi-header-avatar" alt="User Image">
+                                        <img src="<?php echo PREPEND_PATH; ?>images/<?php echo $mpi->image; ?>" class="img-circle user-image" alt="User Image">
                                         <p>
                                             <?php echo "user: ". getLoggedMemberID(); ?> 
                                             <br> 
@@ -79,7 +89,7 @@
                                     <!-- Menu Footer-->
                                     <li class="user-footer">
                                       <div class="col-xs-6 text-center">
-                                        <a href="<?php echo PREPEND_PATH; ?>membership_profile.php" class="btn btn-app"><i class="fa fa-user"></i>&nbsp;Profile</a>
+                                        <a href="<?php echo PREPEND_PATH; ?>LTE/membership_profile.php" class="btn btn-app"><i class="fa fa-user"></i>&nbsp;Profile</a>
                                       </div>
                                       <div class="col-xs-6 text-center">
                                         <!--<a href="#" class="btn btn-app">Sign out</a>-->

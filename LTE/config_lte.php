@@ -1,25 +1,13 @@
 <?php
-$globals = '{
-    "app-title-prefix"  :"Ale | ", 
-    "app-dir-RTL-enable" : false ,
-    "logo-mini"         :"glyphicon glyphicon-tags", 
-    "logo-mini-text"    :"LTE", 
-    "navbar-text"       :"Alejandro Landini template AdminLTE",
-    "footer-left-text"  :"<strong>ALE © '. date("Y") .' <a href=\"#\">Alejandro Landini <small>admin template from LTE Admin</small></a>.</strong>",
-    "footer-right-text" :"Anything you want"
-}';
 
-$LTE_globals = json_decode($globals,true);
+//TODO: controlar el funcionamiento de esta función para que no tenga un error.
+$cjson = file_get_contents('config.json',true);
 
-//changue this for groupname icon {"groupname":"ico"},
-$ico_menu = '{
-    "logins":"fa fa-table",
-    "Locations":"fa fa-gift",
-    "Pencil":"fa fa-pencil-square-o",
-    "Cog":"fa fa-cog",
-    "hidden":"fa fa-plus",
-    "slash":"fa fa-eye-slash"
-}';
+$cjson = json_decode($cjson,true);
+
+$LTE_globals = $cjson[0]['Globals'];
+$LTE_group_ico = $cjson[1]['Icon Groups'];
+$ico = "fa fa-table"; //default ico
 
 //change to FALSE if you want back to appgini default
 function getLteStatus($LTE_enable = true){
