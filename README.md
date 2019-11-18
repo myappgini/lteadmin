@@ -1,7 +1,7 @@
 
 # adminLTE for AppGini
 
-## First release R1.0.0
+## Release R1.0.0
 
 Staring the new versión
 
