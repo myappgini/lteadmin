@@ -20,9 +20,9 @@ $user_group = strtolower($user_data["group"]);
 			$j(this).focus();
 			$j(this).select();
 		});
-		setTimeout(fucntion(){
+		setTimeout(function(){
 			save_ws('json_editor','<?php echo PREPEND_PATH; ?>'+'plugins/lte/app-resources/'+'jsonsave.php'); 
-		}, 500);
+		}, 2000);
 	});
 </script>
 <div class="json-edit">

@@ -4,7 +4,7 @@
 	$lte_class = new lte_class(array(
 		'title' => 'Landini AdminLTE Enable',
 		'name' => 'lte',
-		'logo' => 'application_side_list.png'
+		'logo' => 'template.mid.png'
 	));
 
 	if(!defined('PREPEND_PATH')) define('PREPEND_PATH', '../../');
