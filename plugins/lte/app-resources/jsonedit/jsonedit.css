@@ -1,0 +1,201 @@
+pre {
+    display: inline;
+    margin: 2px;
+    font-family: courier;
+    white-space: pre-wrap;
+    min-width: auto;
+}
+
+div[data-type="object"] {
+    border: 1px solid #fcc;
+    padding-bottom: 8px;
+}
+
+div[data-type="array"] {
+    border: 1px solid #ccf;
+    padding-bottom: 8px;
+}
+
+div[data-role="arrayitem"]>div {
+    margin: 2px;
+}
+
+[data-type="string"] {
+    color: #4AA150;
+}
+
+[data-type="number"] {
+    color: #D67B13;
+}
+
+[data-type="null"] {
+    color: #919191;
+}
+
+[data-type="boolean"] {
+    color: #FA6B8F;
+}
+
+[data-ic]~i{
+    color: green;
+    font-size: x-large; 
+    margin: 10px;
+}
+
+div[data-role="value"] {
+    margin-left: 20px;
+}
+
+div[data-role="prop"],
+div[data-role="arrayitem"] {
+    /* border: 0px solid #ccf; */
+    display: block;
+    margin: 1px;
+    margin-top: 9px;
+    padding: 10px;
+    color: #4155A6;
+}
+
+span[data-role="key"] {
+    display: inline-block;
+    min-width: 200px;
+    margin: 2px;
+}
+
+.edit_box {
+    display: inline-block;
+    padding: 0px;
+    margin: 0px;
+    /* min-width: 150px; */
+}
+
+.collapse_box {
+    font-size: 9pt;
+    color: #999;
+    padding: 0px;
+    margin: 0px;
+    cursor: pointer;
+}
+
+.dimmed {
+    opacity: 0.4;
+    filter: alpha(opacity=40);
+    background: #999;
+}
+
+
+/* all context menus have this class */
+.context-menu {
+    -webkit-border-radius: 4px;
+    -moz-border-radius: 4px;
+    border-radius: 4px;
+
+    background-color: #f2f2f2;
+    border: 1px solid #999;
+
+    list-style-type: none;
+    margin: 0;
+    padding: 0;
+}
+
+.context-menu a {
+    display: block;
+    padding: 3px;
+    text-decoration: none;
+    color: #333;
+}
+
+.context-menu a:hover {
+    background-color: #666;
+    color: white;
+}
+
+/* Z-index of #mask must lower than #boxes .window */
+#mask {
+    position: absolute;
+    z-index: 9000;
+    background-color: #000;
+    display: none;
+    top: 0px;
+    bottom: 0px;
+    right: 0px;
+    left: 0px;
+}
+
+#boxes .window {
+    position: absolute;
+    width: 440px;
+    height: 200px;
+    display: none;
+    z-index: 9999;
+    padding: 20px;
+}
+
+#dialog a.close {
+    color: #EDAF42;
+    text-decoration: none;
+    border: 1px solid #333;
+    padding: 2px 10px;
+    margin: 2px 0px;
+    display: inline-block;
+    border-radius: 3px;
+    background: #666;
+}
+
+#dialog a.close:hover {
+    background: A37931;
+    color: #444;
+}
+
+#past_ws {
+    height: 168px;
+    overflow: auto;
+}
+
+/* Customize your modal window here, you can add background image too */
+#boxes #dialog {
+    width: 375px;
+    height: 203px;
+    background: #fff;
+}
+
+div[data-type="object"]>div.inline_add_box {
+    border: 1px solid #fcc;
+}
+
+div[data-type="array"]>div.inline_add_box {
+    border: 1px solid #ccf;
+}
+
+div.inline_add_box {
+    margin: 5px 0px 0px -2px;
+    border-radius: 3px;
+    background: white;
+    min-width: 20px;
+    color: #AAA;
+    text-align: center;
+    padding: 0px;
+    font-family: Verdana !important;
+    font-size: 9px;
+    float: right;
+    position: absolute;
+    border: 1px solid;
+    min-height: 4px;
+    max-height: 30px;
+    overflow: hidden;
+}
+
+div.inline_add_box a {
+    font-size: 9px;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+div.add_box_content {
+    display: block;
+    padding: 0px;
+    margin: 2px;
+    padding-left: 5px;
+    text-align: center;
+    cursor: default;
+}
