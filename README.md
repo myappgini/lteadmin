@@ -2,7 +2,7 @@
 
 ## First release R0.1.0
 
-This version will remain in a new branch to continue support
+This version will remain in a new branch to continue support. I will changue to new versión.
 
 ![Login Page](https://trello-attachments.s3.amazonaws.com/5cf458a4c077516299941bbf/600x295/4543ab3b3cfe3a5e98ce23f3f76f0ff2/imagen.png)
 
