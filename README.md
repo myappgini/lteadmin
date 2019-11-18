@@ -17,7 +17,7 @@ Use **git** into your root project:
 
 ```cmd
 
-$ git clone https://github.com/myappgini/lteadmin.git 
+$git clone https://github.com/myappgini/lteadmin.git
 
 ```
 
@@ -88,7 +88,6 @@ Older
 - myCustom.css
 
 - modification of the background image and add exmples images
-
 
 ```css
 
