@@ -86,6 +86,8 @@ class Mpi {
                             $ret = $this->noImage;
                         }
                         break;
+                    }else{
+                        $ret = $this->noImage;
                     }
                 }
             }
@@ -102,6 +104,8 @@ class Mpi {
                             $ret = $this->noImage;
                         }
                         break;
+                    }else{
+                        $ret = $this->noImage;
                     }
                 }
             }
