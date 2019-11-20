@@ -21,6 +21,78 @@ $git clone https://github.com/myappgini/lteadmin.git .
 
 ```
 
+Plugin directory tree
+.
+├── backgrounds
+├── hooks
+├── images
+├── LTE
+│   ├── bower_components
+│   │   ├── bootstrap
+│   │   ├── chart.js
+│   │   ├── fastclick
+│   │   ├── font-awesome
+│   │   ├── Ionicons
+│   │   ├── jquery
+│   │   └── jquery-slimscroll
+│   ├── dist
+│   │   ├── css
+│   │   ├── img
+│   │   └── js
+│   ├── jsonedit
+│   └── logo
+├── plugins
+│   ├── lte
+│   │   ├── app-resources
+│   │   └── views
+│   └── projects
+└── screenshots
+
+An example tree directory after install plugin.
+.
+├── admin
+│   └── images
+├── backgrounds
+├── hooks
+├── images
+├── LTE
+│   ├── bower_components
+│   │   ├── bootstrap
+│   │   ├── chart.js
+│   │   ├── fastclick
+│   │   ├── font-awesome
+│   │   ├── Ionicons
+│   │   ├── jquery
+│   │   └── jquery-slimscroll
+│   ├── dist
+│   │   ├── css
+│   │   ├── img
+│   │   └── js
+│   ├── jsonedit
+│   └── logo
+├── plugins
+│   ├── lte
+│   │   ├── app-resources
+│   │   └── views
+│   └── projects
+├── resources
+│   ├── bootstrap-datetimepicker
+│   ├── csv
+│   ├── datepicker
+│   ├── images
+│   ├── initializr
+│   ├── jquery
+│   │   └── js
+│   ├── lib
+│   ├── lightbox
+│   ├── moment
+│   ├── PHPMailer
+│   ├── select2
+│   ├── table_icons
+│   └── timepicker
+├── screenshots
+└── templates
+
 ## how to use
 
 After completing the compilation of your project, log in as administrator and go to the administrator area. The "Plugins" menu should appear with the "Landini AdminLTE" option.
