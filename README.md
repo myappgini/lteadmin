@@ -17,7 +17,7 @@ Use **git** into your root project:
 
 ```cmd
 
-$git clone https://github.com/myappgini/lteadmin.git
+$git clone https://github.com/myappgini/lteadmin.git .
 
 ```
 
