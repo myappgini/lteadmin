@@ -59,6 +59,10 @@ return  $LTE_enable;
 
 ## Changues/FIX LOG
 
+23/11/2019
+
+- fix print problem
+
 Older
 
 - fix RTL LTR text
@@ -69,7 +73,7 @@ Older
 
 - fix double wide left side menu in small devices
 
-- fix print problem
+
 
 - fix mpi control
 
