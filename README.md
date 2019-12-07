@@ -15,9 +15,18 @@ Remember that: for the plugin to work, you must have previously purchased an ori
 
 Use **git** into your root project:
 
+### IMPORTANT
+
+**If you do not have your local repository initialized, run first**
+
+ ```cmd
+$git init
+```
+
 ```cmd
 
-$git clone https://github.com/myappgini/lteadmin.git .
+$git remote add -f lteadmin https://github.com/myappgini/lteadmin.git
+$git merge lteadmin/master --allow-unrelated-histories
 
 ```
 
@@ -45,13 +54,13 @@ You can conmute to default appgini only changue true to false in config_lte.php 
 
 function  getLteStatus($LTE_enable = true){
 
-if(!function_exists('getMemberInfo')){
+    if(!function_exists('getMemberInfo')){
 
-$LTE_enable = false;
+        $LTE_enable = false;
 
-}
+    }
 
-return  $LTE_enable;
+    return  $LTE_enable;
 
 }
 
@@ -72,8 +81,6 @@ Older
 - fix PREPEND_PATH in files sources
 
 - fix double wide left side menu in small devices
-
-
 
 - fix mpi control
 
@@ -97,19 +104,19 @@ Older
 
 .content-wrapper {
 
-min-height: 100%;
+    min-height: 100%;
 
-background-color: #ecf0f5;
+    background-color: #ecf0f5;
 
-background: url(background/slide_2.jpg);
+    background: url(background/slide_2.jpg);
 
-background-repeat: no-repeat;
+    background-repeat: no-repeat;
 
-background-attachment: fixed;
+    background-attachment: fixed;
 
-background-size: cover;
+    background-size: cover;
 
-z-index: 800;
+    z-index: 800;
 
 }
 
@@ -121,7 +128,7 @@ z-index: 800;
 
 label[for='id']{
 
-display: none;
+    display: none;
 
 }
 
@@ -129,7 +136,7 @@ display: none;
 
 label[for='id'] + div {
 
-display: none;
+    display: none;
 
 }
 
