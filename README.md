@@ -17,11 +17,15 @@ Use **git** into your root project:
 
 ### IMPORTANT
 
+<<<<<<< HEAD
 **If you do not have your local repository initialized, run first the next command**
 
  ```cmd
 $git init
 ```
+=======
+**If you do not have your local repository initialized, run```cmd $git init```first**
+>>>>>>> 146364803927169607fef488b8bed930cac9b8a5
 
 ```cmd
 
