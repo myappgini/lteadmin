@@ -15,9 +15,14 @@ Remember that: for the plugin to work, you must have previously purchased an ori
 
 Use **git** into your root project:
 
+### IMPORTANT
+
+**If you do not have your local repository initialized, run```cmd $git init```first**
+
 ```cmd
 
-$git clone https://github.com/myappgini/lteadmin.git .
+$git remote add -f lteadmin https://github.com/myappgini/lteadmin.git
+$git merge lteadmin/master --allow-unrelated-histories
 
 ```
 
@@ -45,13 +50,13 @@ You can conmute to default appgini only changue true to false in config_lte.php 
 
 function  getLteStatus($LTE_enable = true){
 
-if(!function_exists('getMemberInfo')){
+    if(!function_exists('getMemberInfo')){
 
-$LTE_enable = false;
+        $LTE_enable = false;
 
-}
+    }
 
-return  $LTE_enable;
+    return  $LTE_enable;
 
 }
 
@@ -72,8 +77,6 @@ Older
 - fix PREPEND_PATH in files sources
 
 - fix double wide left side menu in small devices
-
-
 
 - fix mpi control
 
