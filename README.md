@@ -17,7 +17,7 @@ Use **git** into your root project:
 
 ### IMPORTANT
 
-**If you do not have your local repository initialized, run first**
+**If you do not have your local repository initialized, run first the next command**
 
  ```cmd
 $git init
