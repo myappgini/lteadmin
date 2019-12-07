@@ -21,6 +21,7 @@ Use **git** into your root project:
 
  ```cmd
 $git init
+```
 
 ```cmd
 
